@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    
+</head>
+<body>
+    
+    <h1>KOLEJ PROFESIONAL MARA BERANANG</h1>
+    
+    
+    <a href="{% url 'index' %}">
+        Back
+    </a>
+    <strong>COURSE</strong><br><br>
+
+     <form action="" method="POST">
+        {% csrf_token %}
+            Course Code :
+            <input name="code">
+            <br><br>
+            Description
+            <input name="desc">
+            <br><br>
+            Date
+            <input name="date">
+            <br><br>
+            <input type="submit" value="SAVE">
+
+    </form>
+    <br><br>
+    {{message}} 
+    
+</body>
+</html>

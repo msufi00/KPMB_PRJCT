@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    <h1>UPDATE COURSE</h1>
+
+    <form action="updatedata/{{data.coursecode}}" method="post">
+        {% csrf_token %}
+            Course Code : <input name="code" type="text" value="{{data.coursecode}}" disabled="False">
+            <br><br>
+            Course Name : <input name="desc" type="text" value="{{data.coursename}}">
+            <br><br>
+            Course Date :<input name="date" type="text" value="{{data.coursedate}}">
+            <br><br>
+            <input type="submit" value="UPDATE">
+    </form>
+    <br><br>
+    <a href="{%url 'course'%}">Back</a>
+</body>
+</html>
